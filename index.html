@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- SEO Meta Tags -->
+    <title>Web Agency Genova | Creazione Siti Web & Sviluppo E-Commerce Liguria</title>
+    <meta name="description"
+        content="Agenzia SEO e Web Agency a Genova specializzata in creazione siti web, design interattivo e sviluppo e-commerce in Liguria. Trasformiamo la tua presenza online." />
+    <meta name="keywords"
+        content="creazione siti web Genova, web agency Genova, sviluppo e-commerce Liguria, design interattivo, agenzia SEO Genova" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Web Agency Genova" />
+    <link rel="canonical" href="https://www.webagencygenova.it/" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Web Agency Genova | Design Interattivo" />
+    <meta property="og:description"
+        content="Web agency a Genova: creazione siti web, sviluppo e-commerce Liguria e agenzia SEO. Il tuo partner digitale." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.webagencygenova.it/" />
+    <meta property="og:image" content="https://www.webagencygenova.it/og-image.jpg" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "name": "Web Agency Genova",
+      "image": "https://www.webagencygenova.it/logo.png",
+      "@id": "",
+      "url": "https://www.webagencygenova.it",
+      "telephone": "+390101234567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Garibaldi, 1",
+        "addressLocality": "Genova",
+        "postalCode": "16124",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.4111,
+        "longitude": 8.9328
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "description": "Agenzia SEO Genova specializzata in creazione siti web Genova, design interattivo e sviluppo e-commerce in Liguria."
+    }
+    </script>
+
+    <link rel="stylesheet" href="./src/style.scss" />
+</head>
+
+<body class="light-mode">
+
+    <!-- WCAG 2.1 AA: Salta al contenuto -->
+    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
+
+    <!-- Accessibility Widget -->
+    <div class="a11y-widget" id="a11y-widget" role="region" aria-label="Strumenti di accessibilità">
+        <button class="a11y-widget__toggle" id="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel"
+            aria-label="Apri strumenti di accessibilità">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4"></path>
+                <path d="M12 8h.01"></path>
+                <path d="M7 12h10"></path>
+                <path d="M9 16l-2 3"></path>
+                <path d="M15 16l2 3"></path>
+                <path d="M9 8l-2-3"></path>
+                <path d="M15 8l2-3"></path>
+            </svg>
+            <span class="a11y-widget__label">Accessibilità</span>
+        </button>
+        <div class="a11y-widget__panel" id="a11y-panel" role="dialog" aria-label="Opzioni di accessibilità" hidden>
+            <h2 class="a11y-widget__title">Accessibilità</h2>
+            <div class="a11y-widget__controls">
+                <div class="a11y-control">
+                    <span class="a11y-control__label">Dimensione testo</span>
+                    <div class="a11y-control__buttons" role="group" aria-label="Dimensione testo">
+                        <button class="a11y-btn" id="font-decrease" aria-label="Riduci testo">A−</button>
+                        <button class="a11y-btn a11y-btn--active" id="font-reset" aria-label="Testo normale">A</button>
+                        <button class="a11y-btn" id="font-increase" aria-label="Aumenta testo">A+</button>
+                    </div>
+                </div>
+                <div class="a11y-control">
+                    <span class="a11y-control__label">Contrasto</span>
+                    <button class="a11y-btn a11y-btn--wide" id="high-contrast-toggle" aria-pressed="false">Alto
+                        contrasto</button>
+                </div>
+                <div class="a11y-control">
+                    <span class="a11y-control__label">Animazioni</span>
+                    <button class="a11y-btn a11y-btn--wide" id="stop-animations-toggle" aria-pressed="false">Ferma
+                        animazioni</button>
+                </div>
+                <div class="a11y-control">
+                    <span class="a11y-control__label">Leggibilità</span>
+                    <button class="a11y-btn a11y-btn--wide" id="dyslexia-toggle" aria-pressed="false">Modalità
+                        dislessia</button>
+                </div>
+            </div>
+            <p class="a11y-widget__note">Sito conforme WCAG 2.1 AA · European Accessibility Act</p>
+        </div>
+    </div>
+
+    <div class="custom-cursor" aria-hidden="true"></div>
+
+    <!-- Cookie Banner -->
+    <div class="elegant-cookie" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Consenso cookie">
+        <div class="elegant-cookie__main">
+            <span class="elegant-cookie__headline">I VOSTRI DATI AL SICURO.</span>
+            <p class="elegant-cookie__text">Utilizziamo tecnologie di tracciamento per offrire un'esperienza
+                personalizzata e di alta qualità. Accetta per un'immersione completa.</p>
+        </div>
+        <div class="elegant-cookie__controls">
+            <button id="accept-cookies" class="elegant-cookie__btn accept">Accetta e Continua</button>
+            <button id="reject-cookies" class="elegant-cookie__btn decline">Rifiuta</button>
+        </div>
+    </div>
+
+    <!-- Hero Background: True CSS 3D Floating Shapes -->
+    <div class="hero-bg-elements" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="shapes-scene" id="shapes-scene">
+            <!-- 12 shapes generated dynamically by JS, cube/pyramid/ring types -->
+        </div>
+    </div>
+
+    <div id="smooth-wrapper">
+        <div class="bg-typography" id="bg-typo-1" aria-hidden="true">OLTRE</div>
+        <div class="bg-typography" id="bg-typo-2" aria-hidden="true">VISIONE</div>
+        <div class="bg-typography" id="bg-typo-3" aria-hidden="true">DESIGN</div>
+
+        <div id="smooth-content">
+            <!-- Navbar -->
+            <header class="navbar solid-nav" id="main-nav" role="banner">
+                <a href="#" class="navbar__logo magnetic-btn" aria-label="Web Agency Genova – Homepage">
+                    <svg class="logo-svg" width="60" height="40" viewBox="0 0 100 60" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M10 50 L30 10 L50 50 L70 10 L90 50" stroke="currentColor" stroke-width="8"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="50" cy="30" r="8" fill="var(--c-accent-coral)" />
+                    </svg>
+                </a>
+                <!-- Desktop nav -->
+                <nav class="navbar__links" aria-label="Navigazione principale">
+                    <a href="#services" class="magnetic-btn" data-text="Servizi"><span>Servizi</span></a>
+                    <a href="#about" class="magnetic-btn" data-text="Agenzia"><span>Agenzia</span></a>
+                    <a href="#contact" class="magnetic-btn contact-btn hide-on-mobile"
+                        data-text="Contattaci"><span>Contattaci</span></a>
+
+                    <!-- Mega Interactive CTA in Navbar (MOBILE ONLY NOW) -->
+                    <div class="macro-cta-container mobile-navbar-cta">
+                        <div class="macro-cta magnetic-btn">
+                            <div class="macro-cta__main">
+                                <span class="macro-cta__text">RICHIEDI SITO WEB</span>
+                            </div>
+                            <div class="macro-cta__reveal">
+                                <ul class="macro-cta__icons-list">
+                                    <li><a href="tel:+393518316068" class="icon">+39 351 831 6068</a></li>
+                                    <li><a href="mailto:lucacutrono06@gmail.com"
+                                            class="icon">lucacutrono06@gmail.com</a></li>
+                                    <li><a href="#" class="icon" aria-label="Coming Soon"><span
+                                                style="text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: currentColor;">Instagram</span>
+                                            (Coming Soon)</a></li>
+                                    <li><a href="#" class="icon" aria-label="Coming Soon"><span
+                                                style="text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: currentColor;">Facebook</span>
+                                            (Coming Soon)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- overlay moved outside navbar -->
+                <!-- Hamburger (mobile) -->
+                <button class="navbar__hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu"
+                    aria-label="Apri menu di navigazione">
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                </button>
+            </header>
+
+            <!-- Mobile Menu Overlay -->
+            <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile" aria-hidden="true" hidden>
+                <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Chiudi menu">&#x2715;</button>
+                <ul class="mobile-menu__list" role="list">
+                    <li><a href="#services" class="mobile-menu__link">Servizi</a></li>
+                    <li><a href="#about" class="mobile-menu__link">Agenzia</a></li>
+                    <li><a href="#contact" class="mobile-menu__link">Contattaci</a></li>
+                </ul>
+            </nav>
+
+            <main id="main-content">
+                <!-- Hero Section - Redesigned to stop overlaps -->
+                <section class="hero" id="hero">
+                    <div class="hero__grid">
+                        <div class="hero__left">
+                            <h1 class="hero__title split-text">
+                                CREAZIONE<br />SITI WEB <br> <span class="accent-coral"
+                                    style="font-style: italic;">GENOVA</span>
+                            </h1>
+                        </div>
+                        <div class="hero__right">
+                            <div class="hero__info">
+                                <p class="hero__subtitle">Design interattivo e sviluppo e-commerce in
+                                    Liguria.<br />Eleviamo il tuo brand oltre l'ordinario.</p>
+
+                                <!-- Mega Interactive CTA (DESKTOP ONLY NOW) -->
+                                <div class="macro-cta-container desktop-hero-cta">
+                                    <div class="macro-cta magnetic-btn">
+                                        <div class="macro-cta__main">
+                                            <span class="macro-cta__text">RICHIEDI SITO WEB</span>
+                                        </div>
+                                        <div class="macro-cta__reveal">
+                                            <ul class="macro-cta__icons-list">
+                                                <li><a href="tel:+393518316068" class="icon">+39 351 831 6068</a></li>
+                                                <li><a href="mailto:lucacutrono06@gmail.com"
+                                                        class="icon">lucacutrono06@gmail.com</a></li>
+                                                <li><a href="#" class="icon" aria-label="Coming Soon"><span
+                                                            style="text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: currentColor;">Instagram</span>
+                                                        (Coming Soon)</a></li>
+                                                <li><a href="#" class="icon" aria-label="Coming Soon"><span
+                                                            style="text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: currentColor;">Facebook</span>
+                                                        (Coming Soon)</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Questions Section -->
+                <section class="startup-faq section-padding" id="startup-faq">
+                    <div class="startup-faq__grid">
+                        <div class="startup-faq__header">
+                            <h2 class="split-text">FREQUENT<br>QUESTIONS.</h2>
+                        </div>
+                        <div class="startup-faq__list">
+                            <div class="startup-faq__item">
+                                <h3 class="startup-faq__q">01 / Perché sceglierci?</h3>
+                                <p class="startup-faq__a">Sviluppiamo architetture web incentrate sull'esperienza per
+                                    dominare la nicchia.</p>
+                            </div>
+                            <div class="startup-faq__item">
+                                <h3 class="startup-faq__q">02 / Siete costosi?</h3>
+                                <p class="startup-faq__a">Creiamo un'asimmetria competitiva che giustifica ampiamente
+                                    ogni tipo di investimento.</p>
+                            </div>
+                            <div class="startup-faq__item">
+                                <h3 class="startup-faq__q">03 / Tempi di consegna?</h3>
+                                <p class="startup-faq__a">Ingegneria senza compromessi richiede il tempo adeguato per
+                                    rasentare la perfezione.</p>
+                            </div>
+                            <div class="startup-faq__item">
+                                <h3 class="startup-faq__q">04 / E per la SEO?</h3>
+                                <p class="startup-faq__a">Progettiamo ecosistemi nativamente orientati al dominio puro
+                                    dei posizionamenti organici.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Editorial About Section -->
+                <section class="about section-padding" id="about">
+                    <div class="about__grid">
+                        <div class="about__col about__col--huge" data-speed="1.1">
+                            <h2 class="split-text">Più di un'agenzia.<br>Il tuo partner digitale.</h2>
+                        </div>
+                        <div class="about__col about__col--small">
+                            <p>La nostra Web Agency a Genova fonde creatività radicale e ingegneria pura. Con una
+                                direzione artistica da magazine e una competenza enciclopedica per l'agenzia SEO Genova,
+                                rendiamo visibile e tangibile la tua unicità nel caos digitale.</p>
+                        </div>
+                    </div>
+
+                    <!-- Animated Marquee Separator -->
+                    <div class="marquee-separator" aria-hidden="true">
+                        <div class="marquee-separator__inner">
+                            <!-- First sequence -->
+                            <span>Brand Positioning</span>
+                            <span class="star">✦</span>
+                            <span>E-Commerce Scalabili</span>
+                            <span class="star">✦</span>
+                            <span>Intelligenza Artificiale</span>
+                            <span class="star">✦</span>
+                            <span>Digital Transformation</span>
+                            <span class="star">✦</span>
+                            <!-- Duplicated sequence for seamless loop -->
+                            <span>Brand Positioning</span>
+                            <span class="star">✦</span>
+                            <span>E-Commerce Scalabili</span>
+                            <span class="star">✦</span>
+                            <span>Intelligenza Artificiale</span>
+                            <span class="star">✦</span>
+                            <span>Digital Transformation</span>
+                            <span class="star">✦</span>
+                        </div>
+                    </div>
+
+                    <!-- Services Section Typography -->
+                    <div class="qa-section qa-section--premium">
+                        <div class="qa-item">
+                            <h3 class="qa-item__question">01 / L'Approccio</h3>
+                            <div class="qa-item__answer">
+                                <p>Non creiamo semplici "siti vetrina". Costruiamo <mark>ecosistemi digitali</mark> ad
+                                    altissime
+                                    prestazioni pensati specificamente per il <mark>posizionamento su Google</mark> e
+                                    l'acquisizione
+                                    di clientela <mark>alto spendente</mark>.</p>
+                            </div>
+                        </div>
+                        <div class="qa-item">
+                            <h3 class="qa-item__question">02 / La Tecnologia</h3>
+                            <div class="qa-item__answer">
+                                <p>Sviluppiamo architetture <mark>Headless</mark>, <mark>WebGL interattivo</mark> e
+                                    <mark>GSAP Animation</mark> per spingere il
+                                    limite tecnico ed estetico, mantenendo <mark>Lighthouse score vicino al
+                                        100/100</mark>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="qa-item">
+                            <h3 class="qa-item__question">03 / Il Risultato</h3>
+                            <div class="qa-item__answer">
+                                <p>Il tuo brand posizionato come <mark>leader assoluto</mark>. L'estetica premium
+                                    costruisce
+                                    <mark>fiducia immediata</mark>, la SEO porta <mark>traffico costante</mark>. Un
+                                    binomio
+                                    insuperabile.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video Sequence Scrubbing Effect -->
+                <section class="video-sequence" id="video-sequence">
+                    <div class="video-sequence__sticky">
+                        <canvas id="sequence-canvas"></canvas>
+                        <div class="video-sequence__overlay">
+                            <h2 class="split-text">L'Innovazione<br />Tangibile.</h2>
+                            <p>Un'esperienza visiva fluida che fonde estetica emozionale<br />e performance
+                                ingegneristiche in 16K simulato.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section class="services section-padding" id="services">
+                    <div class="services__header">
+                        <h2>Architetture<br />Digitali.</h2>
+                    </div>
+                    <div class="services__list">
+                        <article class="service-item">
+                            <div class="service-item__number">01</div>
+                            <div class="service-item__text">
+                                <h3>Agenzia SEO Genova</h3>
+                                <p>Posizionamento maniacale ai vertici dei motori. Ottimizzazione tecnica profonda per
+                                    dominare stabilmente il mercato regionale e nazionale.</p>
+                            </div>
+                        </article>
+                        <article class="service-item">
+                            <div class="service-item__number">02</div>
+                            <div class="service-item__text">
+                                <h3>Design Interattivo</h3>
+                                <p>Esperienze utente uniche di altissimo livello. Rompiamo gli schemi classici con
+                                    layout editoriali asimmetrici per colpire l'immaginario dei tuoi clienti.</p>
+                            </div>
+                        </article>
+                        <article class="service-item">
+                            <div class="service-item__number">03</div>
+                            <div class="service-item__text">
+                                <h3>Sviluppo E-Commerce Liguria</h3>
+                                <p>Architetture headless performanti e conversion-oriented. Sviluppiamo ecosistemi di
+                                    vendita per scalare senza limiti geografici.</p>
+                            </div>
+                        </article>
+                        <article class="service-item">
+                            <div class="service-item__number">04</div>
+                            <div class="service-item__text">
+                                <h3>AI Chatbot & Assistenti Virtuali</h3>
+                                <p>Integriamo chatbot intelligenti addestrati sul tuo business. Rispondono 24/7,
+                                    qualificano lead e aumentano il tasso di conversione in modo automatico.</p>
+                            </div>
+                        </article>
+                        <article class="service-item">
+                            <div class="service-item__number">05</div>
+                            <div class="service-item__text">
+                                <h3>Branding & Identità Visiva</h3>
+                                <p>Creiamo sistemi di identità visiva coerenti e memorabili — logo, palette, tipografia
+                                    e brand guidelines — che rendono il tuo brand riconoscibile ovunque.</p>
+                            </div>
+                        </article>
+                        <article class="service-item">
+                            <div class="service-item__number">06</div>
+                            <div class="service-item__text">
+                                <h3>Automazioni AI & Workflow</h3>
+                                <p>Automatizziamo i processi ripetitivi del tuo business con flussi AI personalizzati:
+                                    email marketing, CRM, reportistica e molto altro senza intervento umano.</p>
+                            </div>
+                        </article>
+                        <article class="service-item">
+                            <div class="service-item__number">07</div>
+                            <div class="service-item__text">
+                                <h3>Manutenzione & Supporto Dedicato</h3>
+                                <p>Aggiornamenti continui, monitoraggio uptime e supporto prioritario. Il tuo sito
+                                    rimane sempre al massimo delle prestazioni, sicuro e aggiornato.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer section-padding" id="contact">
+                <div class="footer__content">
+                    <h2 class="footer__title split-text">Pronto a<br />innovare?</h2>
+                    <a href="mailto:lucacutrono06@gmail.com" class="footer__email magnetic-btn"
+                        data-text="lucacutrono06@gmail.com"><span>lucacutrono06@gmail.com</span></a>
+                </div>
+                <div class="footer__bottom">
+                    <span>©2026 Web Agency Genova. Mettiamo il design al centro.</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- overlay for mobile/tablet contact panel -->
+    <div class="macro-cta-overlay" hidden>
+        <button class="macro-cta-overlay__close" aria-label="Chiudi">&times;</button>
+        <ul class="macro-cta__icons-list">
+            <li><a href="tel:+393518316068" class="icon">+39 351 831 6068</a></li>
+            <li><a href="mailto:lucacutrono06@gmail.com" class="icon">lucacutrono06@gmail.com</a></li>
+            <li><a href="#" class="icon" aria-label="Coming Soon"><span
+                        style="text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: currentColor;">Instagram</span>
+                    (Coming Soon)</a></li>
+            <li><a href="#" class="icon" aria-label="Coming Soon"><span
+                        style="text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: currentColor;">Facebook</span>
+                    (Coming Soon)</a></li>
+        </ul>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
