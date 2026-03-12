@@ -1,0 +1,64 @@
+name: SEO Automation (Sitemap, Image Opt, SEO Check)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  seo-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      # 1. Optimize Images
+      - name: Optimize Images
+        uses: calibreapp/image-actions@main
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          compressOnly: true
+
+      # 2. Build Project
+      - name: Build Project
+        run: npm run build
+
+      # 3. Generate Sitemap
+      - name: Generate Sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://lucaa06.github.io/WebAgencyGenova/
+          sitemap-format: xml
+          update-robottxt: true
+
+      # 4. SEO On-Page Check
+      - name: SEO On-Page Check
+        run: node scripts/seo-check.js
+
+      # 5. Deploy to gh-pages (to make sitemap live)
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          npm run deploy
+
+      # 6. Submit Sitemap to Google Search Console
+      - name: Submit Sitemap to Google
+        env:
+          GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
+          GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
+          SITE_URL: https://lucaa06.github.io/WebAgencyGenova/
+        run: node scripts/google-ping.js
