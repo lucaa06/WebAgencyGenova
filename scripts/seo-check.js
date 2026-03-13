@@ -62,6 +62,10 @@ const main = () => {
                     walk(fullPath);
                 }
             } else if (extensions.includes(path.extname(file))) {
+                // Skip Google search console verification files
+                if (file.startsWith('google') && file.endsWith('.html')) {
+                    return;
+                }
                 filesToScan.push(fullPath);
             }
         });
