@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.webagencygenova.it/sitemap.xml
+Sitemap: https://webagencygenova.it/sitemap.xml
