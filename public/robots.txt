@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://webagencygenova.it/sitemap.xml
+Sitemap: https://lucaa06.github.io/WebAgencyGenova/sitemap.xml
