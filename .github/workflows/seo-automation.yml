@@ -40,7 +40,7 @@ jobs:
         id: sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://www.webagencygenova.it/
+          base-url-path: https://webagencygenova.it/
           sitemap-format: xml
           update-robottxt: true
 
@@ -60,5 +60,5 @@ jobs:
         env:
           GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
           GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
-          SITE_URL: https://www.webagencygenova.it/
+          SITE_URL: https://webagencygenova.it/
         run: node scripts/google-ping.js
